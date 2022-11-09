@@ -6,7 +6,6 @@ $con = mysqli_connect("localhost","root","admin1234","test");
 function pagination($con,$table,$pno,$n){
 	$query = $con->query("SELECT COUNT(*) as rows FROM ".$table);
 	$row = mysqli_fetch_assoc($query);
-	//$totalRecords = 100000;
 	$pageno = $pno;
 	$numberOfRecordsPerPage = $n;
 
@@ -38,8 +37,7 @@ function pagination($con,$table,$pno,$n){
 			$pagination .= "<li class='page-item'><a class='page-link' href='".$next."' style='color:#333;'> Next </a></li></ul>";
 		}
 	}
-//LIMIT 0,10
-	//LIMIT 20,10
+
 	$limit = "LIMIT ".($pageno - 1) * $numberOfRecordsPerPage.",".$numberOfRecordsPerPage;
 
 	return ["pagination"=>$pagination,"limit"=>$limit];

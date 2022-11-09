@@ -33,16 +33,7 @@ if (!isset($_SESSION["userid"])) {
 				</tr>
 			</thead>
 			<tbody id="get_category">
-				<!--<tr>
-		        <td>1</td>
-		        <td>Electronics</td>
-		        <td>Root</td>
-		        <td><a href="#" class="btn btn-success btn-sm">Active</a></td>
-		        <td>
-		        	<a href="#" class="btn btn-danger btn-sm">Delete</a>
-		        	<a href="#" class="btn btn-info btn-sm">Edit</a>
-		        </td>
-		      </tr>-->
+				
 			</tbody>
 		</table>
 	</div>
